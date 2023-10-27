@@ -53,7 +53,9 @@ public class ArrayClass{
 
     /**print out all the items in the array */
     void print(){
-        
+        for(int value : storage){
+            System.out.print(value+" ");
+        }
     }
 
 

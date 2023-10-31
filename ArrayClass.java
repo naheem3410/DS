@@ -80,6 +80,7 @@ public class ArrayClass{
             storage[storage.length - 1] = 0;
         }else{
 
+            
         }
     }
 

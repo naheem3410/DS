@@ -35,6 +35,21 @@ public class ArrayClass{
         return storage[storage.length - 1];
     }
 
+    /**
+     * search the array for the item and return its index
+     * @param item
+     * @return item index
+     */
+    int searchItemIndex(int item){
+        if(isItemPresent(item)){
+            for(int index = 0; index < storage.length; index++){
+                if(item == storage[index]){
+                    return index;
+                }
+            }
+        }
+        return -1;
+    }
     /**check for the single occurence of an item
      * @return boolean
      */
@@ -51,11 +66,29 @@ public class ArrayClass{
 
     }
 
+    /**
+     * delete an item already in the array
+     * @param item
+     */
+    void deleteItem(int item){
+        int index = searchItemIndex(item);
+        if(index > -1){
+            while ((index + 1) <= (storage.length - 1)) {
+                storage[index] = storage[index + 1];
+                index++;
+            }
+            storage[storage.length - 1] = 0;
+        }else{
+
+        }
+    }
+
     /**print out all the items in the array */
     void print(){
         for(int value : storage){
             System.out.print(value+" ");
         }
+         System.out.println("");
     }
 
 

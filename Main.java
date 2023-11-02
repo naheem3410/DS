@@ -5,7 +5,7 @@ public class Main {
         for(int i =0+1; i<8; i++){
             one.add(i);
         }
-        one.print();
+        one.print();    
         Boolean isPresent = one.isItemPresent(3);
         System.out.println(isPresent);
         System.out.println("view "+one.view());

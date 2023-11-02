@@ -32,7 +32,7 @@ public class ArrayClass{
      * @return last item
      */
     int view(){
-        return storage[storage.length - 1];
+        return storage[index - 1];
     }
 
     /**
@@ -78,6 +78,7 @@ public class ArrayClass{
                 index++;
             }
             storage[storage.length - 1] = 0;
+            this.index -= 1;//decrease the array index by 1
         }else{
 
             
@@ -86,8 +87,8 @@ public class ArrayClass{
 
     /**print out all the items in the array */
     void print(){
-        for(int value : storage){
-            System.out.print(value+" ");
+        for(int i = 0; i < index; i++){
+            System.out.print(storage[i]+" ");
         }
          System.out.println("");
     }
